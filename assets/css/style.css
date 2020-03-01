@@ -1,6 +1,53 @@
-/* font-family: 'Girassol', ; */
+header {
+    background-color: #15215e;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-left: 90px;
+    font-family: "Girassol";
+    font-size: 32px;
+}
+
+#start-container {
+    background-color: #15215e;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+#background {
+    background-color: #15215e;
+    height: 600px;
+}
+
+footer {
+    background-color: #15215e;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
 
 body {
     background-color: #15215e;
     color: #ffffff;
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+    z-index: -1;
 }
+
+html { 
+    background: url(../images/floatingCandlesBG.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
