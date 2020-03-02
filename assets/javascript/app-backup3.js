@@ -115,8 +115,10 @@ $( document ).ready(function() {
     $("#startBtn").on('click', function(){
         $("#startBtn").hide();
         $("#quiz").toggle();
-        $("#remaining-time").attr("style", "display: show");
-        $("#submitBtn").attr("style", "display: show");
+        $("#quiz").attr("style", "font-family: Girassol;")
+        $("#remaining-time").attr("style", "display: show;");
+        $("#remaining-time").attr("style", "font-family: Girassol;")
+        $("#submitBtn").attr("style", "display: show;");
         newGame();
         startTimer();
     });
@@ -189,20 +191,23 @@ $( document ).ready(function() {
 
   $("#submitBtn").on('click', function(){
     stop();
-    $("#submitBtn").attr("style", "display: none");
-    $("#try-again").attr("style", "display: show");
-    $("#results").attr("style", "display: show");
-    $("#quiz").attr("style", "display: none");
+    $("#submitBtn").attr("style", "display: none;");
+    $("#try-again").attr("style", "display: show;");
+    $("#results").attr("style", "display: show;");
+    $("#quiz").attr("style", "display: none;");
     $("#results").html("Correct: " + numCorrect + "<br><br>");
+    $("#results").attr("style", "font-family: Girassol;")
     $("#results").append("Incorrect: " + numWrong);
+    $("#results").attr("style", "font-family: Girassol;")
     // $("#results").append("Unanswered: " + numEmpty);
   });
 
   $("#try-again").on('click', function(){
-    $("#try-again").attr("style", "display: none");
-    $("#submitBtn").attr("style", "display: show");
-    $("#results").attr("style", "display: none");
-    $("#quiz").attr("style", "display: show");
+    $("#try-again").attr("style", "display: none;");
+    $("#submitBtn").attr("style", "display: show;");
+    $("#results").attr("style", "display: none;");
+    $("#quiz").attr("style", "display: show;");
+    $("#quiz").attr("style", "font-family: Girassol;")
     newGame();
     resetTimer();
   });
@@ -242,6 +247,11 @@ function startTimer() {
     if (time === 0) {
       stop();
       alert("You Ran Out of Time!");
+      $("#quiz").attr("style", "display: none;");
+      $("#results").html("Better Luck Next Time! ✨");
+      $("#results").attr("style", "font-family: Girassol;")
+      $("#try-again").attr("style", "display: show;");
+      $("#submitBtn").attr("style", "display: none;");
     }
   }
 
